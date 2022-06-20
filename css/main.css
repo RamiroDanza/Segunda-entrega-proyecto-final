@@ -1,0 +1,252 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(252, 147, 143);
+}
+
+header{
+
+    background-color: rgb(252, 213, 85);
+    top: 0%;
+    padding-right: 1%;
+    grid-area: header;
+}
+
+header .parteSuperior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center 
+}
+
+.contenedorLogo img{
+    width: 10rem;
+    padding: 4%;
+}
+
+header .parteSuperior .menuArriba{
+    display: flex;  
+}
+
+header .parteSuperior .menuArriba .listasMenu{
+    list-style: none;
+    margin: 4px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* CARRUSEL */
+.slide{
+    margin-top: 10px;
+}
+.slide img{
+    height: 450px;
+    
+}
+
+/* ENVIOS */
+
+.imagenMaps{
+   display: flex;
+   justify-content: center;
+}
+
+/* TIENDA */
+main .contenedorCards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2% 0 2% 0 ;
+}
+    /* card */
+main .contenedorCards .card{
+    width: 18rem;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 20px;
+    margin-bottom: 2%;
+}
+
+main .contenedorCards .card:hover{
+    box-shadow: 10px 10px 10px  black;
+
+}
+
+
+main .contenedorCards .card .contImgCard .imgCard{
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 100%;
+    height: 24rem;
+}
+
+main .contenedorCards .card .contTxtCard{
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+main .contenedorCards .card .contBtnCard{
+    margin-bottom: 1.5%;
+    display: flex;
+    justify-content: center;
+}
+
+main .contenedorCards .card .contBtnCard .btnComprar{
+    width: 95%;
+    border-radius: 20px;
+    border: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+main .contenedorCards .card .contBtnCard .btnComprar:hover{
+    color: white;
+    border: 2px solid white;
+}
+
+
+/* GRID */
+
+html{
+    background-color: rgb(248, 180, 103);
+}
+
+.padre{
+    width: 90%;
+    min-height: 800px;
+    padding: 50px 0;
+    margin: 1% auto;
+    background-color: rgb(177, 168, 157);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3,auto);
+    gap: 6px;
+}
+
+main{
+    grid-area: main;
+}
+
+
+.padre div{
+    width: 400px;
+    height: 500px;
+    margin: 2%;
+    background-color: rgb(231, 218, 27);
+    
+}
+
+.imagenUno img{
+    width: 400px;
+    height: 500px;
+}
+
+.imagenDos img{
+    width: 400px;
+    height: 500px;
+}
+
+.imagenTres img{
+    width: 400px;
+    height: 500px;
+}
+
+.imagenCuatro img{
+    width: 400px;
+    height: 500px;
+}
+
+.imagenCinco img{
+    width: 400px;
+    height: 500px;
+}
+
+.imagenSeis img{
+    width: 400px;
+    height: 500px;
+}
+
+.logoInstagram{
+    display: flex;
+    justify-content: center;
+    grid-area: logo;
+}
+
+.logoInstagram img{
+    width: 50px;
+    height: 50px;
+}
+
+footer{
+    background-color: rgb(250, 197, 24);
+    grid-area: footer;
+    
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "header header"
+                         "main main"
+                         "logo logo"
+                         "footer footer";
+}
+
+
+@media screen and (max-width:760px){
+
+    .grid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "header"
+                             "main"
+                             "logo"
+                             "footer";
+    }
+
+    .padre{
+        width: 100%;
+        min-height: 800px;
+        
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3,auto);
+        gap: 6px;
+    }
+}
+
+@media screen and (max-width:360px){
+    .grid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "header"
+                             "main"
+                             "logo"
+                             "footer";
+    }
+
+    .padre{
+        width: 100%;
+        min-height: 800px;
+        
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3,auto);
+        gap: 6px;
+    }
+
+}
+
+
+
